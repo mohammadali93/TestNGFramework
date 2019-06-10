@@ -1,0 +1,45 @@
+package com.Tasks;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utils.CommonMethods;
+
+//Identify Priority of Test Cases
+//
+//TC 1: OrangeHRM Verify Successful Login
+//Step 1: Open browser and navigate to OrangeHRM
+//Step 2: Enter valid UID and valid PWD and click login button
+//Step 3: Verify user successfully logged in
+//
+//TC 2: OrangeHRM Add Employee
+//	Step 1: Click on PIM link and Add Employee
+//	Step 2: Provide Details and Save
+//	Step 3: Verify Employee is added 
+//
+//TC 3: OrangeHRM Verify Employee Details
+//	Step 1: Click on PIM link and Employee List
+//	Step 2: Search for employee by it id
+//	Step 3: Verify Employee details are displayed 
+//
+//Note: Create BeforeClass and AfterClass annotations to open browser and logout from the application
+public class Task1 extends CommonMethods {
+	@BeforeClass
+	public void setUp() {
+		setUpDriver("chrome", "https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+	}
+
+	@Test(priority = 1)
+	public void login() {
+		sendText(driver.findElement(By.xpath("//input[@name='txtUsername']")), "Admin");
+		sendText(driver.findElement(By.cssSelector("input#txtPassword")), "admin123");
+		driver.findElement(By.cssSelector("input#btnLogin")).click();
+		boolean welcomeAdmin = driver.findElement(By.xpath("//a[text()='Welcome Admin']")).isDisplayed();
+		if (welcomeAdmin = true) {
+			System.out.println("The user is log in");
+		} else {
+			System.out.println("The user is not log in");
+		}
+}
+}

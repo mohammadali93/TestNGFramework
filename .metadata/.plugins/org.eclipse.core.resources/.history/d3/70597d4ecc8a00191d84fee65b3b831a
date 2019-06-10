@@ -1,0 +1,31 @@
+package com.syntax.testcases;
+
+import org.testng.annotations.Test;
+
+import com.syntax.pages.LoginPage;
+import com.syntax.pages.LoginPageWithoutPageFactory;
+import com.syntax.utils.BaseClass;
+import com.syntax.utils.CommonMethods;
+import com.syntax.utils.ConfigsReader;
+
+public class LoginPageTest extends BaseClass{
+
+	@Test
+	public void loginToORangeHRM()
+	{
+		LoginPageWithoutPageFactory login= new LoginPageWithoutPageFactory();
+		CommonMethods.sendText(login.username, "Admin");
+		CommonMethods.sendText(login.password, "V9YwHwi@0Y");
+		CommonMethods.click(login.btnLogin);
+	}
+	
+	@Test
+	public void doLogin()
+	{
+		LoginPage login= new LoginPage();
+		CommonMethods.sendText(login.userName, ConfigsReader.getProperty("Admin"));
+		CommonMethods.sendText(login.password, ConfigsReader.getProperty("V9YwHwi@0Y"));
+		CommonMethods.click(login.loginBtn);
+		
+	}
+}

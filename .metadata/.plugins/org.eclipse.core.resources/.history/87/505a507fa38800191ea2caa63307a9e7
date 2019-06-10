@@ -1,0 +1,22 @@
+package com.class3;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.Test;
+
+import utils.CommonMethods;
+
+public class Task1 extends CommonMethods {
+
+	@BeforeGroups
+	public void setUp()
+	{
+		setUpDriver("chrome", "https://www.saucedemo.com/");
+		
+	}
+	@Test
+	public void userOne()
+	{
+		driver.findElement(By.cssSelector("input#user-name"));
+	}
+}

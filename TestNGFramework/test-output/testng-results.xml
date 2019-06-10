@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9921" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:32:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9921" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:32:00Z">
+      <class name="com.syntax.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="setUpDriver" is-config="true" duration-ms="5630" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:31:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="doLogin()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="doLogin" duration-ms="3587" started-at="2019-06-09T17:31:55Z" finished-at="2019-06-09T17:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="676" started-at="2019-06-09T17:31:59Z" finished-at="2019-06-09T17:32:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.syntax.testcases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

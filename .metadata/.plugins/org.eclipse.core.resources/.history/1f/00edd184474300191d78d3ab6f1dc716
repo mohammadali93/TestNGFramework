@@ -1,0 +1,22 @@
+package com.class8;
+
+public class Task1 {
+public static void main(String[] args) {
+	// print numbers from 1 to 100
+	
+	for (int a=1; a<=100; a++) {
+		System.out.println(a);
+	}
+	
+	// print numbers from 100 to 1
+	
+	for (int i=100; i>=1; i--) {
+		System.out.println(i);
+	}
+	// print odd numbers from 1 to 20 (2 ways)
+	
+	for (int b=20; b<=2; b=+2) {
+		System.out.println(b);
+	}
+}
+}

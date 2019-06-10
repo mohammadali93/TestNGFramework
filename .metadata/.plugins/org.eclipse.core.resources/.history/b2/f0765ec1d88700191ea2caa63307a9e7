@@ -1,0 +1,16 @@
+package com.class02;
+
+import org.testng.annotations.BeforeMethod;
+
+public class SoftandHardAssertExample {
+
+	@ BeforeMethod
+	public void method()
+	{
+		try {
+			
+		}catch(){
+			
+		}
+	}
+}

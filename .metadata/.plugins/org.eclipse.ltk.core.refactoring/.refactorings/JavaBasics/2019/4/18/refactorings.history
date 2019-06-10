@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.class30.Task&apos; to &apos;GetAllValuesFromArrayList&apos;&#x0D;&#x0A;- Original project: &apos;JavaBasics&apos;&#x0D;&#x0A;- Original element: &apos;com.class30.Task&apos;&#x0D;&#x0A;- Renamed element: &apos;com.class30.GetAllValuesFromArrayList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Task&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.class30{Task.java[Task" matchStrategy="1" name="GetAllValuesFromArrayList" qualified="false" references="true" similarDeclarations="false" stamp="1556495183398" textual="false" version="1.0"/>
+</session>

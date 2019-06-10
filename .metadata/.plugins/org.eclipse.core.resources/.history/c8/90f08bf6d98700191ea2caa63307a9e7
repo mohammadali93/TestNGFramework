@@ -1,0 +1,94 @@
+package com.Tasks;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utils.CommonMethods;
+
+//Identify Priority of Test Cases
+//
+//TC 1: OrangeHRM Verify Successful Login
+//Step 1: Open browser and navigate to OrangeHRM
+//Step 2: Enter valid UID and valid PWD and click login button
+//Step 3: Verify user successfully logged in
+//
+//TC 2: OrangeHRM Add Employee
+//	Step 1: Click on PIM link and Add Employee
+//	Step 2: Provide Details and Save
+//	Step 3: Verify Employee is added 
+//
+//TC 3: OrangeHRM Verify Employee Details
+//	Step 1: Click on PIM link and Employee List
+//	Step 2: Search for employee by it id
+//	Step 3: Verify Employee details are displayed 
+//
+//Note: Create BeforeClass and AfterClass annotations to open browser and logout from the application
+public class Task1 extends CommonMethods {
+	@BeforeClass
+	public void setUp() {
+		setUpDriver("chrome", "https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+	}
+
+	@Test(priority = 1)
+	public void login() {
+		sendText(driver.findElement(By.xpath("//input[@name='txtUsername']")), "Admin");
+		sendText(driver.findElement(By.cssSelector("input#txtPassword")), "admin123");
+		driver.findElement(By.cssSelector("input#btnLogin")).click();
+		boolean welcomeAdmin = driver.findElement(By.xpath("//a[text()='Welcome Admin']")).isDisplayed();
+		if (welcomeAdmin = true) {
+			System.out.println("The user is log in");
+		} else {
+			System.out.println("The user is not log in");
+		}
+}
+	@Test(priority = 2)
+	public void addEmployee() throws InterruptedException {
+		driver.findElement(By.xpath("//b[contains(text(),'PIM')]")).click();
+		driver.findElement(By.xpath("//a[text()='Add Employee']")).click();
+		sendText(driver.findElement(By.cssSelector("input#firstName")), "Mohammad");
+		sendText(driver.findElement(By.cssSelector("input#lastName")), "Ali");
+		sendText(driver.findElement(By.cssSelector("input#employeeId")), "Id57121354");
+		
+		String filePath="C:/Users/moham/Downloads/IMG_6426.jpg";
+		driver.findElement(By.xpath("//input[@id='photofile']")).sendKeys(filePath);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@id='chkLogin']")).click();
+		sendText(driver.findElement(By.xpath("//input[@id='user_name']")), "Asmittt_Nepalll");
+		sendText(driver.findElement(By.xpath("//input[@id='user_password']")), "Asmit1234");
+		sendText(driver.findElement(By.xpath("//input[@name='re_password']")), "Asmit1234");
+		driver.findElement(By.xpath("//input[@id='btnSave']")).click();
+		
+		boolean asmitttNepalll=driver.findElement(By.xpath("//h1[text()='Mohammad Ali']")).isDisplayed();
+		if(asmitttNepalll=true) {
+			System.out.println("User details is displayed");
+		}else {
+			System.out.println("User details is not displayed");
+		}
+	}
+		
+		@Test(priority=3)
+		public void searchName() throws InterruptedException {
+			driver.findElement(By.xpath("//a[@id='menu_pim_viewEmployeeList']")).click();
+			sendText(driver.findElement(By.xpath("//input[@id='empsearch_id']")), "Id57121354");
+			driver.findElement(By.xpath("//input[@id='searchBtn']")).click();
+			boolean Id57121354=driver.findElement(By.xpath("//a[text()='Id57121354']")).isDisplayed();
+			if(Id57121354=true) {
+				System.out.println("Details is displayed");
+			
+		}else {
+			System.out.println("Details not is displayed");
+			Thread.sleep(3000);
+		}
+		}
+		
+
+	@AfterClass
+	public void closed() {
+		driver.quit();
+
+	}
+
+}
+

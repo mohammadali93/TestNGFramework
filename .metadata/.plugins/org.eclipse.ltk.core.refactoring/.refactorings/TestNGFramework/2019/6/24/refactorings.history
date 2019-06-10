@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.syntax.pages.LoginPage&apos; to &apos;LoginPageWithoutPageFactory&apos;&#x0D;&#x0A;- Original project: &apos;TestNGFramework&apos;&#x0D;&#x0A;- Original element: &apos;com.syntax.pages.LoginPage&apos;&#x0D;&#x0A;- Renamed element: &apos;com.syntax.pages.LoginPageWithoutPageFactory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LoginPage&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java&lt;com.syntax.pages{LoginPage.java[LoginPage" matchStrategy="1" name="LoginPageWithoutPageFactory" qualified="false" references="true" similarDeclarations="false" stamp="1560091139177" textual="false" version="1.0"/>
+</session>

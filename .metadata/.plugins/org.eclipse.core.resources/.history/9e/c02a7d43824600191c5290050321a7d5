@@ -1,0 +1,21 @@
+package com.Reviewclass;
+
+public class QuizPractice {
+
+
+		
+		public static void main(String s[]) {
+			int x=1;
+
+			do{
+
+			   x++;
+
+			   System.out.print(x);
+
+			}while(x<5);
+
+		    }
+		  
+		}
+

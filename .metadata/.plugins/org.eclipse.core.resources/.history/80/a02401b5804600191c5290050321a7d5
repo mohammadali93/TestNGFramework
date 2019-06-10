@@ -1,0 +1,41 @@
+package com.Reviewclass;
+
+import java.util.Scanner;
+
+public class PracticeRepl {
+	public static void main(String[] args) {
+		  String carOrigin;
+		  Scanner input= new Scanner (System.in);
+		  
+		  System.out.println("Please enter your favorite car make");
+		  carOrigin=input.nextLine();
+		  
+		  switch(carOrigin){
+		    case "BMW":
+		      carOrigin="german car";
+		    break;
+		    case "Toyota":
+		     carOrigin="japenese car";
+		    break;
+		    case "Maserati":
+		      carOrigin="italian car";
+		      break;
+		      default:
+		      carOrigin="unknown";
+		  }
+		  System.out.println("Your favorite car is "+carOrigin);
+		  
+		  //
+		  
+		  
+			    int a= 10;
+			    do {
+			       System.out.println(a);
+			       a--;
+			    }while(a%2!=0);
+			    
+		
+		  
+		}
+		}
+
