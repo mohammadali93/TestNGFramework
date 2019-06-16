@@ -7,8 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.syntax.utils.BaseClass;
 import com.syntax.utils.CommonMethods;
 
-public class LoginPage extends BaseClass {
-
+public class LoginPage extends BaseClass{
+	
+	//locating WebElement using @FindBy annotation
 	@FindBy(id="txtUsername")
 	public WebElement userName;
 	
@@ -21,16 +22,18 @@ public class LoginPage extends BaseClass {
 	@FindBy(css="img[src*='logo.png']")
 	public WebElement logo;
 	
+	@FindBy(xpath="//div[@class='toast-message']")
+    public WebElement message;
+
 	
-	// intialize all of our variables
-	public LoginPage()
-	{
+	//initialize all of our variables
+	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void login(String uname, String pwd) {
-        CommonMethods.sendText(userName, uname);
-        CommonMethods.sendText(password, pwd);
-        CommonMethods.click(loginBtn);
-    }
+		CommonMethods.sendText(userName, uname);
+		CommonMethods.sendText(password, pwd);
+		CommonMethods.click(loginBtn);
+	}
 }

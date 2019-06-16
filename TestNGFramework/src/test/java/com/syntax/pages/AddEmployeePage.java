@@ -19,8 +19,22 @@ public class AddEmployeePage extends BaseClass{
     @FindBy(id="employeeId")
     public WebElement employeeId;
     
+    @FindBy(xpath="//div[@id='location_inputfileddiv']//input")
+    public WebElement location;
+    
+    @FindBy(xpath="//div[@id='location_inputfileddiv']//ul")
+    public WebElement locationList;
+    
+    @FindBy(xpath="//input[@id='chkLogin']")
+    public WebElement createLoginDetails;
+    
+    @FindBy(id="systemUserSaveBtn")
+    public WebElement saveBtn;
+    
+    @FindBy(xpath="//span[@id='pim.navbar.employeeName']")
+    public WebElement empCheck;
+    
     public AddEmployeePage() {
         PageFactory.initElements(driver,this);
     }
 }
-

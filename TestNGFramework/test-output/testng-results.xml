@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9921" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:32:00Z">
+  <suite name="Regression Suite" duration-ms="10209" started-at="2019-06-16T18:37:06Z" finished-at="2019-06-16T18:37:17Z">
     <groups>
+      <group name="regression">
+        <method signature="LoginPageTest.negativeLogin()[pri:0, instance:com.syntax.testcases.LoginPageTest@204f30ec]" name="negativeLogin" class="com.syntax.testcases.LoginPageTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="9921" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:32:00Z">
+    <test name="Regression Test" duration-ms="10209" started-at="2019-06-16T18:37:06Z" finished-at="2019-06-16T18:37:17Z">
       <class name="com.syntax.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="setUpDriver" is-config="true" duration-ms="5630" started-at="2019-06-09T17:31:50Z" finished-at="2019-06-09T17:31:55Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.syntax.testcases.LoginPageTest@204f30ec]" name="setUp" is-config="true" duration-ms="6488" started-at="2019-06-16T18:37:07Z" finished-at="2019-06-16T18:37:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpDriver -->
-        <test-method status="PASS" signature="doLogin()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="doLogin" duration-ms="3587" started-at="2019-06-09T17:31:55Z" finished-at="2019-06-09T17:31:59Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="negativeLogin()[pri:0, instance:com.syntax.testcases.LoginPageTest@204f30ec]" name="negativeLogin" duration-ms="1769" started-at="2019-06-16T18:37:13Z" finished-at="2019-06-16T18:37:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.testcases.LoginPageTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="676" started-at="2019-06-09T17:31:59Z" finished-at="2019-06-09T17:32:00Z">
+        </test-method> <!-- negativeLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.testcases.LoginPageTest@204f30ec]" name="tearDown" is-config="true" duration-ms="663" started-at="2019-06-16T18:37:16Z" finished-at="2019-06-16T18:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.syntax.testcases.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.syntax.testcases.AddEmployeePageTest">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.syntax.testcases.AddEmployeePageTest@5442a311]" name="generateReport" is-config="true" duration-ms="217" started-at="2019-06-16T18:37:06Z" finished-at="2019-06-16T18:37:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.syntax.testcases.AddEmployeePageTest@5442a311]" name="flushReport" is-config="true" duration-ms="416" started-at="2019-06-16T18:37:16Z" finished-at="2019-06-16T18:37:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- com.syntax.testcases.AddEmployeePageTest -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- Regression Suite -->
 </testng-results>
